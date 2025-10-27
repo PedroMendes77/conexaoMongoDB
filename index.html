@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Documentos</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Relatório de Atividades</h1>
+
+    <form id="documentform">
+        <fieldset>
+            <legend>Informações Gerais</legend>
+            <label>Titulo:</label>
+            <input type="text" id="titulo" required>
+
+            <label>Tipo:</label>
+            <select id="tipo">
+                <option value="Relatório">Relatório</option>
+                <option value="Planejamento">Planejamento</option>
+            </select>
+
+            <label>Status:</label>
+            <select id="Status">
+                <option value="Aprovado">Aprovado</option>
+                <option value="Em revisão">Em revisão</option>
+                <option value="Cancelado">Cancelado</option>
+            </select>
+           
+              <label>Data de Envio:</label>
+              <input type="datetime-local" id="nome_responsavel" required>           
+        </fieldset>
+
+         <fieldset>
+            <legend>Responsável</legend>
+            <label>Nome</label>
+            <input type="text" id="nome_responsavel" required>
+
+            <label>Cargo:</label>
+            <input type="text" id="cargo_responsavel" required>
+
+            <label>Departamento:</label>
+                <input type="text" id="departamento_reponsavel" required>
+         </fieldset>
+
+         <fieldset>
+            <legend>Palavras Chaves</legend>
+            <input type="text" id="palavra_input" placeholder="Digite e pressione Enter">
+            <ul id="lista_palavras"></ul>
+         </fieldset>
+
+         <fieldset>
+            <legend>Revisões</legend>
+            <div id="revisoesContainer">
+            <button id="addRevisao">+ Adicionar Revisão</button>
+         </fieldset>
+
+         <div class="botoes-container">
+            <button type="submit" class="gerarBtn">
+            <button type="button" id="gerarPdfBtn" class="pdfBtn">Gerar PDF</button>
+        </div>
+    </form>
+
+    <div class="header-container">
+        <h2>Documento Gerado</h2>
+        <button type="button" id="copyJsonBtn" class="copy-btn">Copiar JSON</button>
+    </div>
+     <pre id="jsonOutput"></pre>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
