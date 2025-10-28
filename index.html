@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Documentos</title>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Relatório de Atividades</h1>
-
-    <form id="documentform">
+    
+    <form id="documentForm">
         <fieldset>
             <legend>Informações Gerais</legend>
-            <label>Titulo:</label>
+            <label>Título:</label>
             <input type="text" id="titulo" required>
 
             <label>Tipo:</label>
@@ -22,52 +22,55 @@
             </select>
 
             <label>Status:</label>
-            <select id="Status">
+            
+            <select id="status">
                 <option value="Aprovado">Aprovado</option>
                 <option value="Em revisão">Em revisão</option>
-                <option value="Cancelado">Cancelado</option>
+                <option value="Cancelado">Cancelado</option>    
             </select>
-           
-              <label>Data de Envio:</label>
-              <input type="datetime-local" id="nome_responsavel" required>           
+
+            <label>Data de Envio:</label>
+            <input type="datetime-local" id="nome_responsavel" required>
         </fieldset>
 
-         <fieldset>
+        <filedset>
             <legend>Responsável</legend>
             <label>Nome</label>
             <input type="text" id="nome_responsavel" required>
 
             <label>Cargo:</label>
-            <input type="text" id="cargo_responsavel" required>
+            <input type="text" id="cargo_responsavel"  required>
 
             <label>Departamento:</label>
-                <input type="text" id="departamento_reponsavel" required>
-         </fieldset>
+            <input type="text" id="departamento_responsavel" required>
+        </filedset>
 
-         <fieldset>
+        <fieldset>
             <legend>Palavras Chaves</legend>
             <input type="text" id="palavra_input" placeholder="Digite e pressione Enter">
             <ul id="lista_palavras"></ul>
-         </fieldset>
+        </fieldset>
 
-         <fieldset>
+        <fieldset>
             <legend>Revisões</legend>
-            <div id="revisoesContainer">
+            <div id="revisoesContainer"></div>
             <button id="addRevisao">+ Adicionar Revisão</button>
-         </fieldset>
+        </fieldset>
 
-         <div class="botoes-container">
-            <button type="submit" class="gerarBtn">
+        
+        <div class="botoes-container">
+            <button type="submit" class="gerarBtn">Gerar Documento</button>
             <button type="button" id="gerarPdfBtn" class="pdfBtn">Gerar PDF</button>
         </div>
     </form>
 
+    
     <div class="header-container">
         <h2>Documento Gerado</h2>
         <button type="button" id="copyJsonBtn" class="copy-btn">Copiar JSON</button>
     </div>
-     <pre id="jsonOutput"></pre>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-     <script src="script.js"></script>
+    <pre id="jsonOutput"></pre>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
