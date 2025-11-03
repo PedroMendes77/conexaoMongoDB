@@ -1,3 +1,4 @@
+/* style */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body{
@@ -11,7 +12,7 @@ body{
 
 h1{
     text-align: center;
-    color: blue;
+    color: #1e3a8a;
     margin-bottom: 25;
 }
 
@@ -19,11 +20,11 @@ form{
     background: white;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px black(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 fieldset{
-    border: 1px solid #333;
+    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 20px;
@@ -31,7 +32,7 @@ fieldset{
 
 legend{
     font-weight: bold;
-    color: blue;
+    color: #1e3e8e;
 }
 
 label{
@@ -41,12 +42,12 @@ label{
 }
 
 input, select{
-    width: 100px;
+    width:100%;
     padding: 10px;
     border: 1px solid #bbb;
     border-radius: 8px;
     margin-top: 5px;
-    box-sizing: border-box;
+    box-sizing:border-box; /* Adicione esta linha para corrigir o alinhamento */
 }
 
 #lista_palavras{
@@ -66,20 +67,30 @@ input, select{
     transition: 0.3s;
 }
 
+#lista_palavras li:hover{
+    background: #1d4ed8;
+}
+
 #addRevisao{
-    background: blue;
+    background: #2563eb;
     color: white;
     border: none;
     padding: 8px 12px;
     border-radius: 8px;
-    cursor: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#addRevisao:hover{
+    background: #1d4ed8;
 }
 
 .gerarBtn{
     width: 100%;
     padding: 12px;
     font-size: 1rem;
-    background: green;
+    background: #10b981;
     color: white;
     border: none;
     border-radius: 10px;
@@ -87,19 +98,26 @@ input, select{
     transition: 0.3s;
 }
 
-.gerarBtn :hover{
+.gerarBtn:hover{
     background: #059669;
 }
 
 #jsonOutput{
-    background: black;
-    color: #e2e8e2;
+    background: #1e293b;
+    color: #e2e8f0;
     padding: 20px;
     border-radius: 10px;
     white-space: pre-wrap;
     word-wrap: break-word;
     font-size: 0.9rem;
     margin-top: 20px;
+}
+
+.revisao{
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .revisao label{
@@ -112,6 +130,7 @@ input, select{
     align-items: center;
     margin-top: 30px;
 }
+
 .copy-btn{
     background: #64748b;
     color: white;
@@ -121,10 +140,10 @@ input, select{
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
-    transition: background-color 0,3s;
+    transition: background-color 0.3s;
 }
 
-.copy-btn :hover{
+.copy-btn:hover{
     background: #475569;
 }
 
@@ -133,14 +152,18 @@ input, select{
     gap: 10px;
 }
 
-.pdfbtn{
+.pdfBtn{
     width: 100%;
     padding: 12px;
     font-size: 1rem;
-    background: red;
+    background: #ef4444;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.pdfBtn:hover{
+    background: #dc2626;
 }
