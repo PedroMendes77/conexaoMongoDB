@@ -10,7 +10,7 @@ app.use(express.json()); // Permite que o servidor entenda JSON
 
 // 3. Conectar ao mongoDB
 const MongoURI = ''; //Colocar a url do seu projeto no mongoDB
-mongoose.connect(MongoURI, { useNewParser: true, useUnfieldTopology: true })
+mongoose.connect(MongoURI, { useNewParser: true, useUnfiedTopology: true })
 .then(() => console.log('Conectado ao MongoDB com sucesso!'))
 .catch(err => console.error('Erro ao conectar ao MongoDB: ', err));
 
@@ -39,7 +39,7 @@ data_envio: Date,
 const Relatorio = mongoose.model('Relatorio', relatorioSchema);
 
 // 6. Criar a "Rota" ou "Endpoint" - o URL que o front-end irá chamar
-app.post('./salvar-relatorio', async(req, res) => {
+app.post('/salvar-relatorio', async(req, res) => {
     try{
         //Pega os dados que o front-end enviou (estão em req.body)
         const dadosDoFormulario = req.body;
